@@ -1,0 +1,111 @@
+.getStarted{
+    background: black;
+    color: white;
+    border-radius: 20px;
+    transform: scale(2);
+}
+
+ion-icon{
+    font-size: 25;
+}
+
+/*input{
+    font-family: ;
+}*/
+
+.container{
+    margin: 150px;
+    padding: 30px;
+    border-radius: 50px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 2px solid black ;
+    transform: scale(2);
+    font-size: 30;
+    justify-content: center;
+    text-align: center;
+}
+
+.container a{
+    text-decoration: none;
+    color: red;
+}
+
+.cardio, .resistance{
+    transition: .5s;
+    border-radius: 50px;
+    transform-origin: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.cardio:hover, .resistance:hover{
+    background-color: rgba(69, 69, 167, 0.612);
+}
+
+.divHolder{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.divHolder img{
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.itemHolder{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item img{
+    transform: scale(0);
+    width: 250px;
+    height: 250px;
+    transition: 1s linear ;
+    border-radius: 50px;
+}
+
+.item:hover img{
+    transform: scale(1);
+}
+
+.item button{
+    position: relative;
+    top: -125px;
+    transition: 1.5s;
+    transform: scale(3);
+}
+
+.item:hover button{
+    top: -10px;
+    transform: scale(1.5);
+}
+
+.exerciseHolder img{
+    width: 250px;
+    height: 200px;
+}
+
+.exerciseHolder{
+    width: 300px;
+}
+
+.exerciseHolder:hover img{
+    border-radius: 50px;
+    box-shadow: 0 0 30px rgb(63, 34, 56);
+    background: white;
+    /*animation: glowing 1s linear infinite;*/
+}
+
+@keyframes glowing {
+    0%, 100%{
+        box-shadow: 0 0 30px rgb(61, 61, 167), 0 0 40px rgb(61, 61, 167), 0 0 50px rgb(61, 61, 167), 0 0 60px rgb(61, 61, 167), 0 0 70px rgb(61, 61, 167);
+    }
+    50%{
+        box-shadow: 0 0 0 ;
+    }
+}
