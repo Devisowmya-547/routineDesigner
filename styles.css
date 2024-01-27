@@ -2,16 +2,32 @@ body{
     background: url(img2.jpeg) fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(5px);
+}
+
+button{
+    cursor: pointer;
 }
 
 .getStarted{
-    background: black;
-    color: white;
     border-radius: 20px;
-    transform: scale(2);
-    border: solid black;
+    transform: scale(2.5);
     cursor:pointer;
+}
+
+.getStarted button{
+    border-radius: 20px;
+    border: 0px solid;
+    font-weight: 600;
+    background: linear-gradient(45deg, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+    cursor: pointer;
+    transition: 1s;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.getStarted:hover button{
+    background: linear-gradient(135deg, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
 }
 
 ion-icon{
@@ -27,7 +43,7 @@ ion-icon{
     padding: 25px;
     border-radius: 50px;
     background: transparent;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(90px);
     border: 2px solid black ;
     transform: scale(1.6);
     font-size: 25;
@@ -37,19 +53,31 @@ ion-icon{
 
 .container a{
     text-decoration: none;
-    color:rgb(168, 95, 12);
+    color:white;
 }
 
 .cardio, .resistance{
     transition: .5s;
     border-radius: 50px;
     transform-origin: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    color: black;
+    font-weight: 900;
+    text-shadow: 0 10px 10px blue;
+}
+
+.cardio ion-icon, .resistance ion-icon{
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: .5s;
+}
+
+.cardio:hover ion-icon, .resistance:hover ion-icon{
+    transform: scale(1);
 }
 
 .cardio:hover, .resistance:hover{
     background-color: rgba(69, 69, 167, 0.612);
+    text-shadow: 0 0 0;
 }
 
 .divHolder{
@@ -104,10 +132,11 @@ ion-icon{
 .exerciseHolder img{
     width: 250px;
     height: 200px;
+    border-radius: 50px;
 }
 
 .exerciseHolder{
-    width: 300px;
+    margin: 10px;
 }
 
 .exerciseHolder:hover img{
